@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root{
+    --body:#F1F1FF;
+    --secondary:#73B4F1;
+    --primary:#506ED1;
+    --hover:#3A3C6E;
+    --text:#929395;
+    --text-hover:#D1D1D1;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    color: var(--text);
+}
+
+img{
+    width: 100%;
+}
+
+section{
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+.container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+
+/* UTLITY CLASSES */
+
+.flex{
+    display: flex;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.show{
+    display: unset !important;
+}
+
+.btn{
+    margin-top: 2rem;
+    padding: .75rem .75rem;
+    border-radius: 70px;
+    border: 1px solid transparent;
+    line-height: .8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s ease;
+    font-weight: 700;
+}
+
+.btn-primary{
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover{
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-secondary{
+    background: var(--hover);
+    color: white;
+    margin-left: 1.5rem;
+    display: none;
+}
+
+.btn-secondary:hover{
+    background:var(--body);
+    color: var(--primary);
+    border: 1px solid var(--hover);
+}
+
+.main-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nav-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: none;
+}
+
+.nav-background .nav-top{
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+.nav-background .logo{
+    padding: 1rem;
+}
+
+.nav-background .nav ul li{
+    margin-bottom: 1rem;
+}
+
+.nav-background .nav-top ul li a{
+    color: var(--secondary);
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.nav-background .nav-top ul li a:hover{
+    color: var(--primary);
+}
+
+.nav-trigger{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 15px;
+    display: none;
+}
+
+.site-content-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--heaven);
+    z-index: 2;
+    transition: all .3s ease;
+}
+
+.site-content-wrapper.scaled{
+    transform:scale(.9) translateX(90%);
+    border-radius: 4px;
+    box-shadow: 0 3px 10px 0 var(--secondary);
+}
+
+.site-content{
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
+
+/* NAVIGATION */
+
+.nav-background .logo{
+    margin-top: 2rem;
+}
+
+.nav-background .nav-top ul li{
+    margin-bottom: .5rem;
+}
+
+header.navigation{
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    background-color: white;
+}
+
+header.navigation .container{
+    justify-content: space-between;
+}
+
+.logo{
+    align-items: center;
+}
+
+.logo span{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.logo img{
+    width: 40px;
+    margin-right: 1rem;
+}
+
+header.navigation .container .nav-links ul{
+    display: flex;
+    margin-right: -2rem;
+}
+
+header.navigation .container .nav-links ul li{
+    margin-right: 2rem;
+}
+
+header.navigation .container .nav-links ul li a{
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 600;
+    transition: all .5s ease;
+}
+
+header.navigation .container .nav-links ul li a:hover{
+    color: var(--primary);
+}
+
+header.navigation .container .nav-links ul li .home{
+    color: var(--primary);
+}
+
+header.navigation .container .nav-links ul li .sign-up{
+    color: white;
+    background-color: var(--primary);
+    padding: .7rem 1rem;
+    border-radius: 40px;
+}
+
+header.navigation .container .nav-links ul li .sign-up:hover{
+    color: var(--text-hover);
+}
+
+section .container .desc{
+    margin: auto;
+}
+
+section .container .desc h1{
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+section .container .desc p{
+    margin-top: .5rem;
+}
+
+
+section.emergency .container{
+    background-color: white;
+    text-align: center;
+    position: relative;
+    border-radius: 50px;
+}
+
+section.emergency .container .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    border-radius: 50%;
+    left: 50%;
+    display: flex;
+    box-shadow: 5px 5px 10px var(--text);
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+section.emergency .container .icon img{
+    width: 60%;
+    margin: auto;
+}
+
+section.emergency .container .need {
+    height: 5rem;
+}
+
+section.emergency .container .need h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+section.emergency .container a{
+    padding: 1rem;
+    background-color: var(--primary);
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    border-radius: 50px;
+    top: 30px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+
+section.emergency .container a:hover{
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+section.service-cards .container .row{
+    margin-right: -12rem;
+    margin-top: 6rem;
+}
+
+section.service-cards .container .column{
+    align-items: center;
+    text-align: center;
+    margin-right: 12rem;
+}
+
+section.service-cards .container .column .desc h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--hover);
+    margin-bottom: 1rem;
+}
+
+section.service-cards .container .image{
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    margin: 0 auto 1.3rem;
+}
+
+section.service-cards .container .image img{
+    width: 50px;
+    margin: auto;
+}
+
+section .container .more{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+section .container .more h1{
+    color: var(--primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+section .container .more h1:hover{
+    color: var(--text-hover);
+}
+
+section.our-doctors h1{
+    text-align: center;
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+section.our-doctors .slider{
+    position: relative;
+}
+
+section.our-doctors .container .profile-slider{
+    align-items: center;
+    margin-right: -1rem;
+}
+
+.our-doctors .slider-btn{
+    width: 30px;
+    height:30px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background: var(--primary);
+    border: none;
+    display: flex;
+}
+
+.our-doctors .slider-btn img{
+    width: 10px;
+    margin: auto;
+}
+
+.prev-btn{
+    position: absolute;
+    top: 46%;
+    left: -3rem;
+    z-index: 1;
+}
+
+.next-btn{
+    position: absolute;
+    top: 46%;
+    right: -3rem;
+    z-index: 1;
+}
+
+section.our-doctors .container .slider .profile-slider .card{
+    background-color: var(--secondary);
+    margin-right: 1rem;
+    border-radius: 20px;
+    background-color: white;
+}
+
+section.our-doctors .container .profile-slider .desc{
+    align-items: center;
+    text-align: center;
+}
+
+section.our-doctors .container .doctor-image{
+    margin:0 auto 1rem;
+}
+
+section.our-doctors .container .doctor-image img{
+    height: 300px;
+    border-radius: 20px;
+}
+
+section.our-doctors .container .social{
+    margin-top: 1rem;
+}
+
+section.our-doctors .container .social .flex{
+    margin: auto;
+}
+
+section.our-doctors .container .social .flex a i{
+    margin-right: 1rem;
+}
+
+section.our-doctors .container .social .flex .fb{
+    color: 	#4267B2;
+}
+
+section.our-doctors .container .social .flex .tweet{
+    color: #00acee;
+}
+
+section.our-doctors .container .social .flex .insta{
+    color: #8a3ab9;
+}
+
+section.our-doctors .container .social img{
+    margin-right: 2rem;
+}
+
+section.news .container .title{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section.news .container .title h1{
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section.news .container .card{
+    background-color: white;
+    border-radius: 20px;
+}
+
+section.news .container .card:first-child{
+    margin-right: 2rem;
+}
+
+section.news .container .card h2{
+    font-size: 2rem;
+    margin: 1rem 0 .5rem;
+    font-weight: 400;
+    color: var(--primary);
+    line-height: 1.3;
+
+}
+
+section.news .container .card .time{
+    padding-bottom: 1rem;
+}
+
+section.news .container .card .time span{
+    margin-right: .5rem;
+    color: var(--text);
+}
+
+section.sign-up .container .image img{
+    width: 70%;
+    margin-left: auto;
+}
+
+section.sign-up .container .desc .btn{
+    margin-top: 0;
+    padding: 1rem;
+}
+
+section.sign-up .container .desc .input-sec{
+    flex-direction: column;
+}
+
+section.sign-up .container .desc .input-sec input{
+    height: 4rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--text);
+    outline: none;
+    padding-left: 1rem;
+    font-size: 1rem;
+    color: var(--text);
+    width: 80%;
+    font-weight: 600;
+}
+
+section.contact{
+    margin-bottom: 0;
+}
+
+section.contact .container .logo{
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+section.contact .container .logo span{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+section.contact .container .logo img{
+    width: 40px;
+    margin-right: .5rem;
+}
+
+section.contact .container .desc{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section.contact .container .social{
+    justify-content: space-between;
+}
+
+section.contact .container .social i{
+    color: var(--primary);
+    margin-right: .5rem;
+}
+
+section.contact .container .social a{
+    color: var(--text);
+    cursor: pointer;
+    transition: all .5s ease;
+    margin: auto;
+}
+
+section.contact .container .social a:hover{
+    color: var(--text-hover);
+}
+
+section.contact .container .form{
+    margin-top: 3rem;
+}
+
+section.contact .container .form .input{
+    flex-direction: column;
+}
+
+section.contact .container .form .input input{
+    width: 80%;
+    height: 3rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 6px;
+    border: .5px solid var(--text);
+}
+
+section.contact .container .form .input-form{
+    flex-direction: column;
+}
+
+section.contact .container .form .input-form textarea{
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+    font-weight: 500;
+    border-radius: 6px;
+    width: 70%;
+    height: 50%;
+}
+
+section.contact .container .form .input-form > div{
+    margin-top: 1rem;
+}
+
+section.contact .container .form .input-form > div a{
+    margin-right: 1rem;
+}
+
+section.contact .container .form .input-form > div a i{
+    color: var(--primary);
+    transition: all .3s ease;
+}
+
+section.contact .container .form .input-form > div a i:hover{
+    color: var(--hover);
+}
+
+footer.copyright{
+    padding: 1rem 0;
+    background: var(--secondary);
+    color:white;
+    text-align: center;
+}
+
+footer.copyright a{
+    color: var(--primary);
+}
+
+footer.copyright a:hover{
+    color: var(--hover);
+}
+
+@media (max-width:1200px){
+
+    .our-doctors .slider-btn{
+        display: none !important;
+    }
+
+}
+
+@media (max-width:780px){
+    
+    h1{
+        font-size: 2rem !important;
+    }
+
+    .nav-trigger{
+        display: block;
+    }
+
+    header.navigation{
+        display: none;
+    }
+
+    section .container{
+        flex-direction: column;
+    }
+
+    section .container .desc{
+        order: 2;
+    }
+
+    section .container .hero-image{
+        order: 1;
+        display: flex;
+    }
+
+    section .container .hero-image img{
+        width: 70%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    section.sign-up .container .desc .input-sec{
+        width: 400px;
+    }
+
+    section.sign-up .container .desc .input-sec input{
+        width: 100%;
+    }
+
+    section.sign-up .container .hero-image img{
+        width: 50%;
+    }
+
+    section.contact .container .desc{
+        width: 100%;
+    }
+
+    section.contact .container .social {
+        flex-direction: column;
+    }
+
+    section.contact .container .social .icon-link{
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+
+    section.contact .container .social a{
+        margin: 0;
+    }
+
+}
+
+@media (max-width:770px){
+
+    .btn-secondary{
+        display: inline-block;
+    }
+
+    section.service-cards{
+        display: none;
+    }
+
+    section.news .container .news-wrapper{
+        flex-direction: column;
+    }
+
+    section.news .container .news-wrapper .card:first-child{
+        margin-bottom: 2rem;
+    }
+
+    section.contact .container .form .input-form textarea{
+        width: 100%;
+        height: 60%;
+    }
+}
+
+@media (max-width:380px){
+    section.emergency .container .need h1{
+        font-size: 1.5rem !important;
+    }
+
+    section.news .container .title{
+        width: 100%;
+    }
+
+    section.news .container .news-wrapper .card:first-child{
+        margin-right: 0;
+    }
+
+    section.sign-up .container .desc .input-sec {
+        width: 100%;
+    }
+
+    footer.copyright{
+        font-size: .9rem;
+    }
+
+    footer.copyright > div:first-child{
+        margin-bottom: .5rem;
+    }
+}
